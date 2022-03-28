@@ -8,6 +8,6 @@ namespace dvs5_paskaita_EntityFrameworkCore.Contexts
         public DbSet<Page> Pages { get; set; }
         public DbSet<Book> Books { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlServer($"Server=localhost;Database=EFC_DB;Trusted_Connection=True;");
+            => options.UseSqlServer($"Server=localhost;Database=dvs05_lecture_Book;Trusted_Connection=True;");
     }
 }

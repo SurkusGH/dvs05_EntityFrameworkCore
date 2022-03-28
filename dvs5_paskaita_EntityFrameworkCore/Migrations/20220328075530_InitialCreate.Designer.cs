@@ -10,7 +10,7 @@ using dvs5_paskaita_EntityFrameworkCore.Contexts;
 namespace dvs5_paskaita_EntityFrameworkCore.Migrations
 {
     [DbContext(typeof(BookContext))]
-    [Migration("20220325170232_InitialCreate")]
+    [Migration("20220328075530_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -10,8 +10,8 @@ using dvs5_paskaita_EntityFrameworkCore.Contexts;
 namespace dvs5_paskaita_EntityFrameworkCore.Migrations
 {
     [DbContext(typeof(BookContext))]
-    [Migration("20220325175312_AddedBookModel")]
-    partial class AddedBookModel
+    [Migration("20220328080320_AddedBookForeignKey")]
+    partial class AddedBookForeignKey
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -41,7 +41,7 @@ namespace dvs5_paskaita_EntityFrameworkCore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("BookId")
+                    b.Property<Guid>("BookID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Content")
@@ -52,16 +52,20 @@ namespace dvs5_paskaita_EntityFrameworkCore.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BookId");
+                    b.HasIndex("BookID");
 
                     b.ToTable("Pages");
                 });
 
             modelBuilder.Entity("dvs5_paskaita_EntityFrameworkCore.Models.Page", b =>
                 {
-                    b.HasOne("dvs5_paskaita_EntityFrameworkCore.Models.Book", null)
+                    b.HasOne("dvs5_paskaita_EntityFrameworkCore.Models.Book", "Book")
                         .WithMany("Pages")
-                        .HasForeignKey("BookId");
+                        .HasForeignKey("BookID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
                 });
 
             modelBuilder.Entity("dvs5_paskaita_EntityFrameworkCore.Models.Book", b =>
