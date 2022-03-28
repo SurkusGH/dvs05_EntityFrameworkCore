@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace dvs5_paskaita_EntityFrameworkCore.Migrations
+namespace dvs05_paskaita_EntityFrameworkCore.Migrations
 {
     public partial class AddedBookModel : Migration
     {

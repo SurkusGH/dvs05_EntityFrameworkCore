@@ -1,10 +1,10 @@
-﻿using dvs5_paskaita_EntityFrameworkCore.Contexts;
-using dvs5_paskaita_EntityFrameworkCore.Models;
+﻿using dvs05_paskaita_EntityFrameworkCore.Contexts;
+using dvs05_paskaita_EntityFrameworkCore.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 
-namespace dvs5_paskaita_EntityFrameworkCore
+namespace dvs05_paskaita_EntityFrameworkCore
 {
     internal class Program
     {

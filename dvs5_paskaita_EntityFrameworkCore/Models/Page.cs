@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace dvs5_paskaita_EntityFrameworkCore.Models
+namespace dvs05_paskaita_EntityFrameworkCore.Models
 {
     public class Page
     {

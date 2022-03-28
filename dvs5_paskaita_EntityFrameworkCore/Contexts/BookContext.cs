@@ -1,7 +1,7 @@
-﻿using dvs5_paskaita_EntityFrameworkCore.Models;
+﻿using dvs05_paskaita_EntityFrameworkCore.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace dvs5_paskaita_EntityFrameworkCore.Contexts
+namespace dvs05_paskaita_EntityFrameworkCore.Contexts
 {
     public class BookContext : DbContext
     {
